@@ -1,0 +1,122 @@
+\documentclass[draft=false
+              ,paper=a4
+              ,twoside=false
+              ,fontsize=11pt
+              ,headsepline
+              ,BCOR10mm
+              ,DIV11
+              ]{scrbook}
+\usepackage[ngerman,english]{babel}
+%% see http://www.tex.ac.uk/cgi-bin/texfaq2html?label=uselmfonts
+
+%\usepackage[utf8]{inputenc}
+%\usepackage[ansinew]{inputenc}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{libertine}
+\usepackage{pifont}
+\usepackage{microtype}
+\usepackage{textcomp}
+\usepackage[german,refpage]{nomencl}
+\usepackage{setspace}
+\usepackage{makeidx}
+\usepackage{listings}
+\usepackage{natbib}
+\usepackage{amsmath, amssymb, amstext}
+\usepackage{graphicx}
+\usepackage[ngerman,colorlinks=true]{hyperref}
+\usepackage{soul}
+
+\usepackage[section]{placeins}
+
+\lstset{%
+  numbers=left,
+  numberstyle=\tiny,
+  stepnumber=1,
+  numbersep=5pt,
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{KeywordColor}\bfseries,
+  identifierstyle=\color{black},
+  commentstyle=\color{CommentColor},
+  backgroundcolor=\color{BackgroundColor},
+  captionpos=b,
+  fontadjust=true
+}
+\lstset{escapeinside={(*@}{@*)}, % used to enter latex code inside listings
+        morekeywords={uint32_t, int32_t}
+}
+\ifpdfoutput{
+  \hypersetup{bookmarksopen=false,bookmarksnumbered,linktocpage}
+}{}
+
+%% more fancy C++
+\DeclareRobustCommand{\cxx}{C\raisebox{0.25ex}{{\scriptsize +\kern-0.25ex +}}}
+
+%% TODOS markieren
+\newcommand{\TODO}[1]{\colorbox{yellow}{\textcolor{red}{[TODO: #1]}}}
+
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+
+% unknown hyphenations
+\hyphenation{
+}
+
+%% recalculate text area
+\typearea[current]{last}
+
+\makeindex
+\makenomenclature
+
+\begin{document}
+\selectlanguage{ngerman}
+\parindent0mm
+\parskip2ex
+
+%% title
+\frontmatter
+\title{Businessplan - Online Software Download Vertrieb mit Lizenzmanagement\\Softladen.de}
+\author{Benjamin Burchard CFO I, Jonas Engler CTPO, Raphael Kemmler CCO, \\Lukas Kern CFO II, Jan-Uriel Lorbeer CPO I, Iwer Petersen CPO II, \\Vinh Phan CMO}
+%% output title page
+\maketitle
+
+\tableofcontents
+\newpage
+%% enable if these lists should be shown on their own page
+%%\listoftables
+%\listoffigures
+%\lstlistoflistings
+
+%% main
+\mainmatter
+\onehalfspacing
+
+\chapter{Einleitung}
+Idee
+Zeitplan
+\chapter{Produkte \& Dienstleistungen}
+\begin{itemize}
+\item Cross Platform-Lizenzen
+\item Software-Miete (Abo)
+Vertrieb für unabh. kleine Entwickler--> QA für diese unabh. SW
+\end{itemize}
+\chapter{Markt}
+\begin{itemize}
+\item Konkurrenz (App-Stores, Softwarebilliger.de)
+\item Marktanteile
+\end{itemize}
+\chapter{Vertrieb}
+\chapter{Finanzen}
+\begin{itemize}
+\item Infrastruktur
+\item SW-Entwicklung
+\item Räume/Büros
+\item Lohnkosten
+\item Rechtsbeistand
+\end{itemize}
+%\bibliographystyle{alpha}
+
+%\bibliography{A1}
+
+\end{document}
