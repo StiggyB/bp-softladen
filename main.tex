@@ -9,9 +9,9 @@
 \usepackage[ngerman,english]{babel}
 %% see http://www.tex.ac.uk/cgi-bin/texfaq2html?label=uselmfonts
 
-%\usepackage[utf8]{inputenc}
+\usepackage[utf8]{inputenc}
 %\usepackage[ansinew]{inputenc}
-\usepackage[latin1]{inputenc}
+%\usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{libertine}
 \usepackage{pifont}
@@ -26,6 +26,8 @@
 \usepackage{graphicx}
 \usepackage[ngerman,colorlinks=true]{hyperref}
 \usepackage{soul}
+\usepackage{marvosym}
+%\usepackage{german}
 
 \usepackage[section]{placeins}
 
@@ -70,7 +72,7 @@
 \makenomenclature
 
 \begin{document}
-\selectlanguage{ngerman}
+
 \parindent0mm
 \parskip2ex
 
@@ -81,7 +83,7 @@
 %% output title page
 \maketitle
 
-\tableofcontents
+%\tableofcontents
 \newpage
 %% enable if these lists should be shown on their own page
 %%\listoftables
@@ -92,17 +94,17 @@
 \mainmatter
 \onehalfspacing
 
-\chapter{Einleitung}
-Idee
-Zeitplan
+\include{IdeeZeitplan}
 
 \include{produkte}
 
-\chapter{Markt}
-\begin{itemize}
-\item Konkurrenz (App-Stores, Softwarebilliger.de)
-\item Marktanteile
-\end{itemize}
+\include{markt}
+%\chapter{Markt}
+%\begin{itemize}
+%\item Konkurrenz (App-Stores, Softwarebilliger.de)
+%\item Marktanteile
+%\end{itemize}
+
 \include{vertrieb}
 
 \include{finanzen}
